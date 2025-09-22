@@ -47,10 +47,9 @@ Either train your policies as above or download the pre-trained checkpoints list
 ### Inference
 To run inference on a WidowX, you need a PEEK VLM server already running or you can follow the instructions below.
 
-There are 3 scripts to care about:
+There are 2 scripts to care about:
 - `lerobot/scripts/eval_widowx.py` to run inference locally on your machine where the WidowX is connected to.
 - `lerobot/scripts/serve_widowx.py` to run the ACT policy server, can be run locally or on a remote machine.
-- TODO: VLM serving script
 
 We give an example pipeline for serving the policy on a remote machine in the following script. Modify the `checkpoint` variable to the path to the checkpoint you want to serve.
 
