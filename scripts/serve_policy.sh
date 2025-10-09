@@ -17,7 +17,6 @@ PEEK_VLM_IP=http://localhost
 
 vlm_server_ip=$PEEK_VLM_IP:$PEEK_VLM_PORT
 
-cd ~/lerobot
 if [[ "$checkpoint" == *"peek"* ]]; then                
     conda run -n lerobot --no-capture-output /bin/bash -c "python lerobot/scripts/serve_widowx.py --policy.path=$checkpoint --policy.use_amp=false --policy.device=cuda --use_vlm true --port $policy_port --vlm_server_ip=$vlm_server_ip --vlm_query_frequency=$serve_policy_vlm_freq"
 else
